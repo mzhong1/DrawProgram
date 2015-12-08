@@ -8,7 +8,7 @@ int xMin = 10; //position of canvas from left
 int xMax = 1014; //position of canvas from right
 int yMin = 10;
 int yMax = 710;
-
+color col = #CD30FA;
 void setup () {
   size(1024, 720);
   background(0);
@@ -33,7 +33,7 @@ void setup () {
 void draw() {
   
   
-  stroke(0);
+  stroke(col);
   strokeWeight(4);
   smooth();
   if((mouseX > xMin)&&(mouseX < xMax))
