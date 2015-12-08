@@ -15,23 +15,23 @@
  */
 
 public void Red_click(GButton source, GEvent event) { //_CODE_:Red:633822:
-  println("Red - GButton >> GEvent." + event + " @ " + millis());
+  col = #FA3030;
 } //_CODE_:Red:633822:
 
 public void Yellow_click(GButton source, GEvent event) { //_CODE_:Yellow:263855:
-  println("Yellow - GButton >> GEvent." + event + " @ " + millis());
+  col = #FAE330;
 } //_CODE_:Yellow:263855:
 
 public void Green_click(GButton source, GEvent event) { //_CODE_:Green:760754:
-  println("Green - GButton >> GEvent." + event + " @ " + millis());
+  col = #61FA30;
 } //_CODE_:Green:760754:
 
 public void Blue_click(GButton source, GEvent event) { //_CODE_:Blue:378273:
-  println("Blue - GButton >> GEvent." + event + " @ " + millis());
+  col = #30FADD;
 } //_CODE_:Blue:378273:
 
 public void Purple_click(GButton source, GEvent event) { //_CODE_:Purple:606470:
-  println("Purple - GButton >> GEvent." + event + " @ " + millis());
+  col = #CD30FA;
 } //_CODE_:Purple:606470:
 
 
