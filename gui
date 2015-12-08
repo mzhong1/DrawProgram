@@ -39,7 +39,7 @@ public void Eraser_click(GButton source, GEvent event) { //_CODE_:Eraser:983116:
 } //_CODE_:Eraser:983116:
 
 public void Size_change(GSlider source, GEvent event) { //_CODE_:Line_size:703256:
-  println("Line_size - GSlider >> GEvent." + event + " @ " + millis());
+  weight = source.getTrackOffset();
 } //_CODE_:Line_size:703256:
 
 
