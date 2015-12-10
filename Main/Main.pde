@@ -1,4 +1,6 @@
 import processing.sound.*;
+import g4p_controls.*;
+
 //SoundFile A;
 //SoundFile G;
 //SoundFile E;

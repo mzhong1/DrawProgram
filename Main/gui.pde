@@ -1,3 +1,7 @@
+import g4p_controls.GEvent;
+import g4p_controls.*;
+import g4p_controls.GButton;
+import processing.serial.*;
 /* =========================================================
  * ====                   WARNING                        ===
  * =========================================================
