@@ -1,9 +1,9 @@
 import processing.sound.*;
-//SoundFile A; 
+//SoundFile A;
 //SoundFile G;
-//SoundFile E; 
-//SoundFile C; 
-//SoundFile D; 
+//SoundFile E;
+//SoundFile C;
+//SoundFile D;
 int xMin = 10; //position of canvas from left
 int xMax = 1014; //position of canvas from right
 int yMin = 10;
@@ -19,21 +19,21 @@ void setup () {
   color green = #5FF536;
   color blue = #36AAF5;
   color purple = #B136F5;
-  
+
   //C = new SoundFile(this, path);
   //D = new SoundFile(this, path);
   //E = new SoundFile(this, path);
   //G = new SoundFile(this, path);
   //A = new SoundFile(this, path);
-  
+
   rect(xMin, yMin, width - 2*xMin, height - 2*yMin);
-  
+
   createGUI();
 }
 
 void draw() {
-  
-  
+
+
   stroke(col);
   strokeWeight(weight);
   smooth();
