@@ -1,5 +1,9 @@
 import processing.sound.*;
 import g4p_controls.*;
+import ddf.minim.*;
+
+Minim minim;
+AudioPlayer song;
 
 //SoundFile A;
 //SoundFile G;
@@ -28,6 +32,9 @@ void setup () {
   //G = new SoundFile(this, path);
   //A = new SoundFile(this, path);
 
+  minim = new Minim(this);
+  song = minim.loadFile("airhorn.mp3");
+
   rect(xMin, yMin, width - 2*xMin, height - 2*yMin);
 
   createGUI();
@@ -35,7 +42,8 @@ void setup () {
 
 void draw() {
 
-
+  //A = new SoundFile(this, "airhorn.mp3");
+  
   stroke(col);
   strokeWeight(weight);
   smooth();
@@ -45,8 +53,19 @@ void draw() {
     {
       if(mousePressed)
       {
+        song.play();
+        //song.loop();
         line(pmouseX, pmouseY, mouseX, mouseY);
       }
+      if(!mousePressed)
+      {
+        song.pause();
+        minim.stop();
+
+        song = minim.loadFile("airhorn.mp3");
+
+      }
+      
     }
   }
 }
