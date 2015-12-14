@@ -58,7 +58,13 @@ public void Triangle(GButton source, GEvent event) {
   }
   shape = 2;
 } 
-
+public void Circle(GButton source, GEvent event) { 
+  if (col == white)
+  {
+    col = purple;
+  }
+  shape = 3;
+} 
 
 public void Size_change(GSlider source, GEvent event) { //_CODE_:Line_size:703256:
   weight = source.getValueF();
@@ -105,6 +111,10 @@ public void createGUI(){
   Triangle.setText("Triangle");
   Triangle.setLocalColorScheme(GCScheme.BLUE_SCHEME);
   Triangle.addEventHandler(this, "Triangle");
+  Circle = new GButton(this, 10, 270, 70, 20);
+  Circle.setText("Circle");
+  Circle.setLocalColorScheme(GCScheme.BLUE_SCHEME);
+  Circle.addEventHandler(this, "Circle");
   Line_size = new GSlider(this, 102, 9, 100, 40, 10.0);
   Line_size.setShowValue(true);
   Line_size.setLimits(4.0, 0.0, 60.0);
@@ -124,4 +134,5 @@ GButton Purple;
 GButton Eraser;
 GButton Rectangle;
 GButton Triangle;
+GButton Circle;
 GSlider Line_size; 
