@@ -21,15 +21,17 @@ int yMin = 10;
 int yMax = 710;
 color col = #CD30FA;
 float weight = 4;
+color red = #FF0303;
+color yellow = #F5E236;
+color green = #5FF536;
+color blue = #36AAF5;
+color purple = #B136F5;
+color white = #FFFFFF;
 void setup () {
   size(1024, 720);
   background(0);
   noStroke();
-  color red = #FF0303;
-  color yellow = #F5E236;
-  color green = #5FF536;
-  color blue = #36AAF5;
-  color purple = #B136F5;
+
 
   //C = new SoundFile(this, path);
   //D = new SoundFile(this, path);
