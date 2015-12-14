@@ -69,10 +69,11 @@ public void createGUI(){
   Blue.addEventHandler(this, "Blue_click");
   Purple = new GButton(this, 10, 130, 70, 20);
   Purple.setText("Purple");
+  Purple.setLocalColorScheme(GCScheme.PURPLE_SCHEME);
   Purple.addEventHandler(this, "Purple_click");
   Eraser = new GButton(this, 10, 163, 70, 20);
   Eraser.setText("Eraser");
-  Eraser.setLocalColorScheme(GCScheme.GOLD_SCHEME);
+  Eraser.setLocalColorScheme(GCScheme.BLUE_SCHEME);
   Eraser.addEventHandler(this, "Eraser_click");
   Line_size = new GSlider(this, 102, 9, 100, 40, 10.0);
   Line_size.setShowValue(true);
