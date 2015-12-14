@@ -16,27 +16,42 @@
 
 public void Red_click(GButton source, GEvent event) { //_CODE_:Red:633822:
   col = red;
+  shape = 0;
 } //_CODE_:Red:633822:
 
 public void Yellow_click(GButton source, GEvent event) { //_CODE_:Yellow:263855:
   col = yellow;
+  shape = 0;
 } //_CODE_:Yellow:263855:
 
 public void Green_click(GButton source, GEvent event) { //_CODE_:Green:760754:
   col = green;
+  shape = 0;
 } //_CODE_:Green:760754:
 
 public void Blue_click(GButton source, GEvent event) { //_CODE_:Blue:378273:
   col = blue;
+  shape = 0;
 } //_CODE_:Blue:378273:
 
 public void Purple_click(GButton source, GEvent event) { //_CODE_:Purple:606470:
   col = purple;
+  shape = 0;
 } //_CODE_:Purple:606470:
 
 public void Eraser_click(GButton source, GEvent event) { //_CODE_:Eraser:983116:
   col = white;
+  shape = 0;
 } //_CODE_:Eraser:983116:
+
+public void Rectangle(GButton source, GEvent event) { 
+  if (col == white)
+  {
+    col = purple;
+  }
+  shape = 1;
+} 
+
 
 public void Size_change(GSlider source, GEvent event) { //_CODE_:Line_size:703256:
   weight = source.getValueF();
@@ -75,6 +90,10 @@ public void createGUI(){
   Eraser.setText("Eraser");
   Eraser.setLocalColorScheme(GCScheme.BLUE_SCHEME);
   Eraser.addEventHandler(this, "Eraser_click");
+  Rectangle = new GButton(this, 10, 210, 70, 20);
+  Rectangle.setText("Square");
+  Rectangle.setLocalColorScheme(GCScheme.BLUE_SCHEME);
+  Rectangle.addEventHandler(this, "Rectangle");
   Line_size = new GSlider(this, 102, 9, 100, 40, 10.0);
   Line_size.setShowValue(true);
   Line_size.setLimits(4.0, 0.0, 60.0);
@@ -91,5 +110,6 @@ GButton Yellow;
 GButton Green; 
 GButton Blue; 
 GButton Purple; 
-GButton Eraser; 
+GButton Eraser;
+GButton Rectangle;
 GSlider Line_size; 

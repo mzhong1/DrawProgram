@@ -15,7 +15,7 @@ int xMin = 10; //position of canvas from left
 int xMax = 1014; //position of canvas from right
 int yMin = 10;
 int yMax = 710;
-color col = #CD30FA;
+color col = #B136F5;
 float weight = 4;
 color red = #FF0303;
 color yellow = #F5E236;
@@ -23,6 +23,7 @@ color green = #5FF536;
 color blue = #36AAF5;
 color purple = #B136F5;
 color white = #FFFFFF;
+int shape = 0;
 void setup () {
   size(1024, 720);
   background(0);
@@ -81,7 +82,7 @@ void draw() {
 
         line(pmouseX, pmouseY, mouseX, mouseY);
       }
-      if(!mousePressed)
+      if(!mousePressed) 
       {
         if (col == red) //red
         {
@@ -116,4 +117,14 @@ void draw() {
       
     }
   }
+}
+
+void mouseClicked()
+{
+  if (shape == 1)
+  {
+    fill(col);
+    rect(mouseX, mouseY, 50, 50);
+    
+  } 
 }
