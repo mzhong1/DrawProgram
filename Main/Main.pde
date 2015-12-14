@@ -10,11 +10,7 @@ AudioPlayer E;
 AudioPlayer C;
 AudioPlayer D;
 
-//SoundFile A;
-//SoundFile G;
-//SoundFile E;
-//SoundFile C;
-//SoundFile D;
+
 int xMin = 10; //position of canvas from left
 int xMax = 1014; //position of canvas from right
 int yMin = 10;
@@ -33,14 +29,7 @@ void setup () {
   noStroke();
 
 
-  //C = new SoundFile(this, path);
-  //D = new SoundFile(this, path);
-  //E = new SoundFile(this, path);
-  //G = new SoundFile(this, path);
-  //A = new SoundFile(this, path);
-
   minim = new Minim(this);
-//  song = minim.loadFile("A.mp3");
   C = minim.loadFile("C.mp3");
   D = minim.loadFile("D.mp3");
   E = minim.loadFile("E.mp3");
@@ -54,8 +43,6 @@ void setup () {
 }
 
 void draw() {
-
-  //A = new SoundFile(this, "airhorn.mp3");
   
   stroke(col);
   strokeWeight(weight);
@@ -91,8 +78,7 @@ void draw() {
           G.play();
           G.setGain(weight-30);
         }
-        //song.play();
-        //song.rewind();
+
         line(pmouseX, pmouseY, mouseX, mouseY);
       }
       if(!mousePressed)
@@ -117,8 +103,7 @@ void draw() {
         {
           G.pause();
         }
-        
-        //song.pause();
+
         minim.stop();
         C = minim.loadFile("C.mp3");
         D = minim.loadFile("D.mp3");
@@ -126,7 +111,6 @@ void draw() {
         G = minim.loadFile("G.mp3");
         A = minim.loadFile("A.mp3");
         
-        //song = minim.loadFile("A.mp3");
 
       }
       
