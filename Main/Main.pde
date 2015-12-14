@@ -124,7 +124,12 @@ void mouseClicked()
   if (shape == 1)
   {
     fill(col);
-    rect(mouseX, mouseY, 50, 50);
-    
+    rect(mouseX, mouseY, 50, 50);    
+  } 
+  if (shape == 2)
+  {
+    print("hihihihi");
+    fill(col);
+    triangle(mouseX, mouseY, mouseX + 12, mouseY - 25, mouseX + 25, mouseY);
   } 
 }
