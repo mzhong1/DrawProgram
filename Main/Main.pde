@@ -53,27 +53,27 @@ void draw() {
     {
       if(mousePressed)
       {
-        if (col == #FA3030) //red
+        if (col == red) //red
         {
           A.play();
           A.setGain(weight-30);
         }
-        else if (col == #FAE330) //yellow
+        else if (col == yellow) //yellow
         {
           C.play();
           C.setGain(weight-30);
         }
-        else if (col == #61FA30) //green
+        else if (col == green) //green
         {
           D.play();
           D.setGain(weight-30);
         }
-        else if (col == #30FADD) //blue
+        else if (col == blue) //blue
         {
           E.play();
           E.setGain(weight-30);
         }
-        else if (col == #CD30FA) //purple
+        else if (col == purple) //purple
         {
           G.play();
           G.setGain(weight-30);
@@ -83,23 +83,23 @@ void draw() {
       }
       if(!mousePressed)
       {
-        if (col == #FA3030) //red
+        if (col == red) //red
         {
           A.pause();
         }
-        else if (col == #FAE330) //yellow
+        else if (col == yellow) //yellow
         {
           C.pause();
         }
-        else if (col == #61FA30) //green
+        else if (col == green) //green
         {
           D.pause();
         }
-        else if (col == #30FADD) //blue
+        else if (col == blue) //blue
         {
           E.pause();
         }
-        else if (col == #CD30FA) //purple
+        else if (col == purple) //purple
         {
           G.pause();
         }
