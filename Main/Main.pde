@@ -4,6 +4,11 @@ import ddf.minim.*;
 
 Minim minim;
 AudioPlayer song;
+AudioPlayer A;
+AudioPlayer G;
+AudioPlayer E;
+AudioPlayer C;
+AudioPlayer D;
 
 //SoundFile A;
 //SoundFile G;
@@ -33,11 +38,17 @@ void setup () {
   //A = new SoundFile(this, path);
 
   minim = new Minim(this);
-  song = minim.loadFile("airhorn.mp3");
-
+//  song = minim.loadFile("A.mp3");
+  C = minim.loadFile("C.mp3");
+  D = minim.loadFile("D.mp3");
+  E = minim.loadFile("E.mp3");
+  G = minim.loadFile("G.mp3");
+  A = minim.loadFile("A.mp3");
+  
   rect(xMin, yMin, width - 2*xMin, height - 2*yMin);
 
   createGUI();
+  
 }
 
 void draw() {
@@ -53,16 +64,62 @@ void draw() {
     {
       if(mousePressed)
       {
-        song.loop();
-        //song.loop();
+        if (col == #FA3030) //red
+        {
+          A.play();          
+        }
+        else if (col == #FAE330) //yellow
+        {
+          C.play();          
+        }
+        else if (col == #61FA30) //green
+        {
+          D.play();          
+        }
+        else if (col == #30FADD) //blue
+        {
+          E.play();          
+        }
+        else if (col == #CD30FA) //purple
+        {
+          G.play();
+        }
+        //song.play();
+        //song.rewind();
         line(pmouseX, pmouseY, mouseX, mouseY);
       }
       if(!mousePressed)
       {
-        song.pause();
+        if (col == #FA3030) //red
+        {
+          A.pause();
+        }
+        else if (col == #FAE330) //yellow
+        {
+          C.pause();
+        }
+        else if (col == #61FA30) //green
+        {
+          D.pause();
+        }
+        else if (col == #30FADD) //blue
+        {
+          E.pause();
+        }
+        else if (col == #CD30FA) //purple
+        {
+          G.pause();
+        }
+        
+        //song.pause();
         minim.stop();
-
-        song = minim.loadFile("airhorn.mp3");
+        C = minim.loadFile("C.mp3");
+        D = minim.loadFile("D.mp3");
+        E = minim.loadFile("E.mp3");
+        G = minim.loadFile("G.mp3");
+        A = minim.loadFile("A.mp3");
+        
+        //song = minim.loadFile("A.mp3");
 
       }
       
