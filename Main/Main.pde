@@ -129,11 +129,6 @@ void mouseClicked()
   if (shape == 2)
   {
     fill(col);
-    triangle(mouseX, mouseY, mouseX + 12, mouseY - 25, mouseX + 25, mouseY);
-  } 
-  if (shape == 3)
-  {
-    fill(col);
-    ellipse(mouseX, mouseY, weight*2, weight*2);
+    triangle(mouseX, mouseY, mouseX + (weight / 2), mouseY - weight, mouseX + weight, mouseY);
   } 
 }
