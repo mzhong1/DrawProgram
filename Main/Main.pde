@@ -66,23 +66,28 @@ void draw() {
       {
         if (col == #FA3030) //red
         {
-          A.play();          
+          A.play();
+          A.setGain(weight-30);
         }
         else if (col == #FAE330) //yellow
         {
-          C.play();          
+          C.play();
+          C.setGain(weight-30);
         }
         else if (col == #61FA30) //green
         {
-          D.play();          
+          D.play();
+          D.setGain(weight-30);
         }
         else if (col == #30FADD) //blue
         {
-          E.play();          
+          E.play();
+          E.setGain(weight-30);
         }
         else if (col == #CD30FA) //purple
         {
           G.play();
+          G.setGain(weight-30);
         }
         //song.play();
         //song.rewind();
