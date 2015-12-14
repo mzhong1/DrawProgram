@@ -124,7 +124,7 @@ void mouseClicked()
   if (shape == 1)
   {
     fill(col);
-    rect(mouseX, mouseY, 50, 50);
+    rect(mouseX, mouseY, weight*2, weight*2);
     
   } 
 }
