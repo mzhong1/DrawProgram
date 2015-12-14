@@ -9,6 +9,7 @@ AudioPlayer G;
 AudioPlayer E;
 AudioPlayer C;
 AudioPlayer D;
+AudioPlayer Tri;
 
 
 int xMin = 10; //position of canvas from left
@@ -36,6 +37,7 @@ void setup () {
   E = minim.loadFile("E.mp3");
   G = minim.loadFile("G.mp3");
   A = minim.loadFile("A.mp3");
+  Tri = minim.loadFile("Triangle.mp3");
   
   rect(xMin, yMin, width - 2*xMin, height - 2*yMin);
 
@@ -130,5 +132,6 @@ void mouseClicked()
   {
     fill(col);
     triangle(mouseX, mouseY, mouseX + (weight / 2), mouseY - weight, mouseX + weight, mouseY);
+    Tri.play();
   } 
 }
