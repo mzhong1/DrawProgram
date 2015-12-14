@@ -53,7 +53,7 @@ void draw() {
     {
       if(mousePressed)
       {
-        song.play();
+        song.loop();
         //song.loop();
         line(pmouseX, pmouseY, mouseX, mouseY);
       }
