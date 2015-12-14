@@ -16,32 +16,26 @@
 
 public void Red_click(GButton source, GEvent event) { //_CODE_:Red:633822:
   col = red;
-  shape = 0;
 } //_CODE_:Red:633822:
 
 public void Yellow_click(GButton source, GEvent event) { //_CODE_:Yellow:263855:
   col = yellow;
-  shape = 0;
 } //_CODE_:Yellow:263855:
 
 public void Green_click(GButton source, GEvent event) { //_CODE_:Green:760754:
   col = green;
-  shape = 0;
 } //_CODE_:Green:760754:
 
 public void Blue_click(GButton source, GEvent event) { //_CODE_:Blue:378273:
   col = blue;
-  shape = 0;
 } //_CODE_:Blue:378273:
 
 public void Purple_click(GButton source, GEvent event) { //_CODE_:Purple:606470:
   col = purple;
-  shape = 0;
 } //_CODE_:Purple:606470:
 
 public void Eraser_click(GButton source, GEvent event) { //_CODE_:Eraser:983116:
   col = white;
-  shape = 0;
 } //_CODE_:Eraser:983116:
 
 public void Rectangle(GButton source, GEvent event) { 
