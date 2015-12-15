@@ -10,6 +10,7 @@ AudioPlayer E;
 AudioPlayer C;
 AudioPlayer D;
 AudioPlayer Tri;
+AudioPlayer Drum;
 
 
 int xMin = 10; //position of canvas from left
@@ -38,7 +39,7 @@ void setup () {
   G = minim.loadFile("G.mp3");
   A = minim.loadFile("A.mp3");
   Tri = minim.loadFile("Triangle.mp3");
-  
+  Drum = minim.loadFile("Drum.mp3");
   rect(xMin, yMin, width - 2*xMin, height - 2*yMin);
 
   createGUI();
@@ -127,6 +128,7 @@ void mouseClicked()
   {
     fill(col);
     rect(mouseX, mouseY, weight*2, weight*2);  
+    Drum.play();
   } 
   if (shape == 2)
   {
