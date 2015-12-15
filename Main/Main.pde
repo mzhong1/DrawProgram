@@ -26,6 +26,7 @@ color green = #5FF536;
 color blue = #36AAF5;
 color purple = #B136F5;
 color white = #FFFFFF;
+color bg;
 color kill = #001100;
 int shape = 0;
 int pressStart;
@@ -41,6 +42,7 @@ void setup () {
   size(1024, 720);
   background(0);
   noStroke();
+  bg = white;
 
   pressFlag = false;
   minim = new Minim(this);
@@ -78,11 +80,11 @@ void draw() {
         color temp = savedFrame.get(mouseX, mouseY);
         if(bg != temp)
         {
-          pauseSound(bg);
+          pauseTone(bg);
           bg = temp;
         }
-        playSound(bg);
-        playSound(col);
+        playTone(bg);
+        playTone(col);
 
         line(pmouseX, pmouseY, mouseX, mouseY);
       }
@@ -147,6 +149,7 @@ void mousePressed() {
 void mouseReleased() {
   pressEnd = millis();
   pressFlag = false;
+  saveFlag = false;
   if (pressEnd - pressStart > 150) 
   {
     pauseTone(kill);
