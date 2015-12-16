@@ -150,6 +150,7 @@ void mouseReleased() {
   pressEnd = millis();
   pressFlag = false;
   saveFlag = false;
+  bg = white;
   if (pressEnd - pressStart > 150) 
   {
     pauseTone(kill);
